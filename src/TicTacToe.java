@@ -16,8 +16,30 @@ public class TicTacToe {
         System.out.println("| " + input.charAt(6) + " " + input.charAt(7) + " "
                 + input.charAt(8) + " |");
 
+        int sumOfX = 0;
+        int sumOfO = 0;
+        // first row
+        for (int i = 0; i < 8; i++) {
+            if (input.charAt(i) == 'X') {
+                sumOfX += input.charAt(i);
+            } else if (input.charAt(i) == 'O') {
+                sumOfO += input.charAt(i);
+            }
 
-        System.out.println("---------"); // lower grid
+
+            if (sumOfO == 237) {
+                System.out.println("---------"); // lower grid
+                System.out.println("O wins");
+                return;
+            } else if (sumOfX == 264) {
+                System.out.println("---------"); // lower grid
+                System.out.println("X wins");
+                return;
+            }
+
+        }
+
+
     }
 }
 
