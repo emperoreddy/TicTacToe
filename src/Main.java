@@ -29,8 +29,6 @@ public class Main {
         int numberX = countChar(enter, 'X');
         int delta = Math.abs(numberX - numberO);
 
-
-
         System.out.println("---------");
         System.out.println("| " + enter.charAt(0) + " " + enter.charAt(1) + " " + enter.charAt(2) + " |");
         System.out.println("| " + enter.charAt(3) + " " + enter.charAt(4) + " " + enter.charAt(5) + " |");
@@ -56,7 +54,6 @@ public class Main {
                 line('O', enter, 0, 4, 8) ||
                 line('O', enter, 2, 4, 6);
 
-
         if (Xwin && Owin || (delta > 1)) {
             System.out.println("Impossible");
         } else if (Owin) {
@@ -68,5 +65,7 @@ public class Main {
         } else {
             System.out.println("Draw");
         }
+        scanner.close();
     }
+
 }
